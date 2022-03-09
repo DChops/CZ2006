@@ -5,7 +5,10 @@ class User(models.Model):
           age = models.PositiveIntegerField()
           gender = models.BinaryField(default=TRUE)
           password = models.CharField(max_length=50)
-          hasbicycle = models.BinaryField(default=FALSE)     
+          hasbicycle = models.BinaryField(default=FALSE) 
+
+          def __str__(self):
+              return self.email    
 
 #         name = models.CharField(max_length=50)
 #         currentLocation = Location()
