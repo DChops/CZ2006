@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Additional apps added by Dchops
     'rest_framework',
-    'UserApp',
+    'UserApp.apps.UserappConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,11 +78,13 @@ WSGI_APPLICATION = 'MobileApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'UserDetails',
+        'USER': 'postgres',
+        'PASSWORD': 'Tanvi@0509',
+        'HOST':'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
